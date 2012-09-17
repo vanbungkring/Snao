@@ -4,5 +4,6 @@ $(document).ready(function() {
 });
 
 function loadJson() {
-	alert(123)
+	alert("Merdeka123")
+
 }
