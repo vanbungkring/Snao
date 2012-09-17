@@ -1,9 +1,7 @@
-var global_apikey = "";
+var global_api = 'd1d11c0cf2605c1e396a';
 $(document).ready(function() {
-	loadJson();
 });
 
-function loadJson() {
-	alert("Merdeka123")
-
+function setParameters() {
+	// adding function to set parameters date time, and  location of hotels
 }
