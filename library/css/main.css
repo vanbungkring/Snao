@@ -7,6 +7,15 @@ body {
 	font-family: tahoma;
 	font-size: 100%;
 }
+#header {
+	width: 100%;
+	background: #000;
+	height:60px;
+}
+#header .insider {
+	width: 980px;
+	margin: 0 auto;
+}
 #main {
 	width: 980px;
 	margin: 0 auto;
