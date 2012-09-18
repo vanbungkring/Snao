@@ -42,7 +42,12 @@ body {
 	float: right;
 	padding: 5px;
 }
-
+.form-zakat {
+	border: none;
+	padding: 4px;
+	width:300px;
+	margin-left:5px;
+}
 .footer {
 	width: 980px;
 	text-align: center;
