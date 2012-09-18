@@ -24,7 +24,14 @@ body {
 	margin-top: 20px;
 	overflow: hidden;
 }
+.header-content {
 
+	width: 960px;
+	float: left;
+	border-bottom: none;
+	padding: 10px;
+	background: #000;
+}
 .container_element {
 	width: 980px;
 	float: left;
@@ -45,13 +52,13 @@ body {
 .form-zakat {
 	border: none;
 	padding: 4px;
-	width:300px;
-	margin-left:5px;
+	width: 300px;
+	margin-left: 5px;
 }
 .footer {
 	width: 980px;
 	text-align: center;
 	margin: 0 auto;
-	font-size:11px;
-	margin-top:10px;
+	font-size: 11px;
+	margin-top: 10px;
 }
