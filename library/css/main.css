@@ -65,19 +65,39 @@ body {
 }
 
 /* adding content menu on front end*/
+.cta {
+	font-weight: bold;
+	text-align: center;
+	font-size: 44px;
+	font-family: 'Lemon', cursive;
+	color: #2e2e2e;
+	display: block;
+}
+.ayat {
+	display: block;
+
+	text-align: center;
+	font-family: Georgia;
+	font-style: italic;
+	width: 450px;
+	margin: 0 auto;
+	line-height: 2em;
+		margin-top: 30px;
+}
+
 .content-block {
+	margin-top: 20px;
 	width: 290px;
 	float: left;
-
 	padding: 10px;
 	margin-right: 25px;
 	background: #ccc;
 }
-.content-block p{
+.content-block p {
 	line-height: 1.3em;
-	
 }
 .content-block:last-child {
+	margin-top: 20px;
 	width: 290px;
 	float: right;
 	padding: 10px;
