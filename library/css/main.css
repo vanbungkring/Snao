@@ -10,7 +10,7 @@ body {
 #header {
 	width: 100%;
 	background: #000;
-	height: 60px;
+	height: 40px;
 }
 #header .insider {
 	width: 980px;
@@ -24,22 +24,4 @@ body {
 	margin-top: 20px;
 	overflow: hidden;
 }
-.column {
-	width: 960px;
-	padding: 10px;
-	background-color: #ccc;
-}
-.column-left {
-	padding: 10px;
-	float: left;
-	display: block;
-	width: 780px;
-	background-color: #ff6600;
-}
-.result-right {
-	padding: 10px;
-	display: block;
-	width: 160px;
-	float: left;
-	background-color: #666;
-}
+
