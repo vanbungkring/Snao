@@ -42,3 +42,9 @@ body {
 	float: right;
 	padding: 5px;
 }
+
+.footer {
+	width: 980px;
+	text-align: center;
+	margin: 0 auto;
+}
