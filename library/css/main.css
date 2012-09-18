@@ -17,6 +17,12 @@ body {
 	width: 980px;
 	margin: 0 auto;
 }
+#main-front{
+	width: 980px;
+	margin: 0 auto;
+	margin-top: 20px;
+	overflow: hidden;
+}
 #main {
 	background: #B5B4AE;
 	width: 980px;
@@ -54,8 +60,26 @@ body {
 .form-zakat {
 	border: none;
 	padding: 4px;
-	width: 300px;
+	width: 310px;
 	margin-left: 5px;
+}
+
+/* adding content menu on front end*/
+.content-block{
+	width:310px;
+	float:left;
+	height:100px;
+	margin-right:30px;
+	background: #000;
+	
+}
+.content-block:last-child{
+	width:300px;
+	float:right;
+	height:100px;
+	margin-right:0;
+	background: #000;
+	
 }
 .footer {
 	width: 980px;
