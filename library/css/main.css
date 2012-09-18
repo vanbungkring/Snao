@@ -31,6 +31,8 @@ body {
 	border-bottom: none;
 	padding: 10px;
 	background: #000;
+	display: block;
+	color:#fff;
 }
 .container_element {
 	width: 980px;
