@@ -17,8 +17,12 @@ body {
 	margin: 0 auto;
 }
 #main {
-	width: 980px;
+	background: #fff;
+	width: 960px;
+	padding: 10px;
 	margin: 0 auto;
+	margin-top: 20px;
+	overflow: hidden;
 }
 .column {
 	width: 960px;
