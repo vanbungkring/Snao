@@ -4,8 +4,8 @@ html {
 }
 body {
 	background-image: url('../images/bg.png');
-	font-family: tahoma;
-	font-size: 100%;
+	font-family: arial;
+	font-size: 90%;
 }
 #header {
 	width: 100%;
@@ -33,11 +33,11 @@ body {
 .container_untuk_label {
 	width: 600px;
 	float: left;
-	border-right: 1px solid #efefef;
 	border-bottom: none;
 	padding: 10px;
 }
 .container_untuk_form {
+	border-left: 1px solid #efefef;
 	width: 320px;
 	float: right;
 	padding: 5px;
