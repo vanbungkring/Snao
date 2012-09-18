@@ -55,12 +55,12 @@ body {
 	border-left: 1px solid #efefef;
 	width: 320px;
 	float: right;
-	padding: 5px;
+	padding: 10px 5px;
 }
 .form-zakat {
 	border: none;
 	padding: 4px;
-	width: 310px;
+	width: 300px;
 	margin-left: 5px;
 }
 
