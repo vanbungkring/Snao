@@ -9,8 +9,9 @@ body {
 }
 #header {
 	width: 100%;
-	background: #000;
 	height: 40px;
+	background-image: url('../images/menu_gradient.png');
+	background-repeat: repeat-x;
 }
 #header .insider {
 	width: 980px;
