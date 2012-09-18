@@ -4,6 +4,24 @@
 	<head>
 		<script type="text/javascript" src="library/js/jquery.js"></script>
 		<script type="text/javascript" src="library/js/hammer.js"></script>
+		<script type="text/javascript" src="library/js/jquery.calculation.js"></script>
+		<script type="text/javascript" src="library/js/jquery.calculation.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			// update the plug-in version
+				$("#idPluginVersion").text($.Calculation.version);
+		
+			// automatically update the "#totalGaji" field every time
+			//sum of all the input objects that start with the name attribute of "sum"
+			// the values are changes via the keyup event
+				//($("input[name^=gaji]").sum("keyup", "#totalGaji")) * 12;
+			
+			
+	
+				
+		})
+	
+		</script>
 		<link rel="stylesheet" href="library/css/reset.css" />
 		<link rel="stylesheet" href="library/css/main.css" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -25,7 +43,7 @@
 					Pendapatan (Gaji/Perbulan)
 				</div>
 				<div class="container_untuk_form">
-					<input name="pdpt_gj" id="pdpt_gj" type="text" class="form-zakat"/>
+					<input name="gaji_bulan" id="gaji_bulan" type="text" class="form-zakat"/>
 				</div>
 			</div>
 			<div class="container_element">
@@ -33,7 +51,7 @@
 					Pendapatan Lain-lain(/Bulan)
 				</div>
 				<div class="container_untuk_form">
-					<input name="pdpt_ln" id="pdpt_ln" type="text" class="form-zakat" />
+					<input name="gaji_lain" id="gaji_lain" type="text" class="form-zakat" />
 				</div>
 			</div>
 			<div class="container_element">
@@ -49,7 +67,7 @@
 					Pemasukan/Pendapatan per Tahun
 				</div>
 				<div class="container_untuk_form">
-					<input name="pdpt_thn" id="pdpt_thn" type="text" class="form-zakat" />
+					<input name="totalGaji" id="totalGaji" type="text" class="form-zakat" readonly="readonly" />
 				</div>
 			</div>
 			<div class="header-content">
@@ -60,7 +78,7 @@
 					Harga beras saat ini (/Kg)
 				</div>
 				<div class="container_untuk_form">
-					<input name="hrg_brs" id="hrg_brs" type="text" class="form-zakat"/>
+					<input name="hrg_brs" id="hrg_brs" value="6000" type="text" class="form-zakat"/>
 				</div>
 			</div>
 			<div class="container_element">
