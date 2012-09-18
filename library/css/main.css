@@ -26,8 +26,18 @@ body {
 }
 
 .container_element {
-	width: 960px;
+	width: 980px;
 	float: left;
-	padding: 10px;
 	border-bottom: 1px solid #efefef;
 }
+.container_untuk_label {
+	width: 600px;
+	float: left;
+	border-right: 1px solid #efefef;
+	border-bottom: none;
+	padding: 10px;
+}
+.container_untuk_form {
+	width: 320px;
+	float: right;
+	padding: 5px;
