@@ -1,15 +1,48 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html>
 	<head>
-		<script type="text/javascript" src="library/js/jquery.js"></script>
-		<script type="text/javascript" src="library/js/cufon.js"></script>
-		<script type="text/javascript" src="library/js/test.js"></script>
-		<link rel="stylesheet" href="library/css/reset.css" />
-		<link rel="stylesheet" href="library/css/main.css" />
-		<link href='http://fonts.googleapis.com/css?family=Lemon' rel='stylesheet' type='text/css'>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Kalkulator Zakat</title>
+		<title>Example 2</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+
+				if (document.createElement("datalist").options) {
+
+					$("#search").on("input", function(e) {
+						var val = $(this).val();
+						if (val === "")
+							return;
+						//You could use this to limit results
+						//if(val.length < 3) return;
+						console.log(val);
+						$.get("artservice.cfc?method=getart&returnformat=json", {
+							term : val
+						}, function(res) {
+							var dataList = $("#searchresults");
+							dataList.empty();
+							if (res.DATA.length) {
+								for (var i = 0, len = res.DATA.length; i < len; i++) {
+									var opt = $("<option></option>").attr("value", res.DATA[i][0]);
+									dataList.append(opt);
+								}
+
+							}
+						}, "json");
+					});
+
+				}
+
+			})
+		</script>
 	</head>
-	<body> </body>
+
+	<body>
+
+		<p>
+			<input type="text" name="search" id="search" placeholder="Type Something" list="searchresults" autocomplete="off">
+			<datalist id="searchresults"></datalist>
+		</p>
+
+	</body>
 </html>
+
