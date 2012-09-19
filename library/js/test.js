@@ -8,7 +8,6 @@ $(document).ready(function() {
 			getCity(val)
 		}
 	});
-	getGMT()
 });
 function getGMT() {
 	$.ajax({
@@ -27,9 +26,14 @@ function getGMT() {
 	});
 };
 
+
 function getCity(city) {
-	var url = "http://maps.googleapis.com/maps/api/geocode/json?address=jakarta&sensor=true"
-	$.getJSON(url, function(data) {
-		console.log(data)
+	$.ajax({
+	    dataType: 'jsonp',
+	    url: 'http://maps.googleapis.com/maps/api/geocode/json?address='+city+'&sensor=true',
+	    success: function (data) {
+	        console.log(data.status);
+	    }
 	});
+
 };
