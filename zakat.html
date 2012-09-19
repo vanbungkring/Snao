@@ -5,19 +5,7 @@
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 		<script type="text/javascript" src="library/js/jquery.js"></script>
 		<script type="text/javascript" src="library/js/hammer.js"></script>
-		<script type="text/javascript" src="library/js/jquery.calculation.js"></script>
-		<script type="text/javascript" src="library/js/jquery.calculation.min.js"></script>
-		<script type="text/javascript">
-		$(document).ready(function () {
-			function calc() {
-				$('#totalGaji').val((parseInt($('#gaji_bulan').val(), 10) + parseInt($("#gaji_lain").val(), 10) - parseInt($("#htg").val(), 10)) * 12);
-			}
-			$('#gaji_bulan').keyup(calc);
-			$("#gaji_lain").keyup(calc);
-			$("#htg").keyup(calc);
-});
-	
-		</script>
+		<script type="text/javascript" src="library/js/bungkring.js"></script>
 		<link rel="stylesheet" href="library/css/reset.css" />
 		<link rel="stylesheet" href="library/css/main.css" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
