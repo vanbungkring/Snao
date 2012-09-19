@@ -19,7 +19,7 @@
 		</header>
 		-->
 		<div id="main">
-
+		    
 			<div class="header-content">
 				I. Penghasilan/Pemasukan
 			</div>
@@ -63,7 +63,7 @@
 					Harga beras saat ini (/Kg)
 				</div>
 				<div class="container_untuk_form">
-					<input name="hrg_brs" id="hrg_brs" value="6000" type="text" class="form-zakat"/>
+					<input name="hrg_brs" id="hrg_brs" value=0 type="text" class="form-zakat"/>
 				</div>
 			</div>
 			<div class="container_element">
@@ -71,7 +71,7 @@
 					Besarnya nishab pertahun
 				</div>
 				<div class="container_untuk_form">
-					<input name="nsb_thn" id="nsb_thn" type="text" class="form-zakat" />
+					<input name="nsb_thn" id="nsb_thn" value=0 type="text" class="form-zakat" readonly="readonly" />
 				</div>
 			</div>
 			<div class="container_element">
@@ -79,7 +79,7 @@
 					Wajib membayar zakat profesi?
 				</div>
 				<div class="container_untuk_form">
-					<input name="zkt_prf" id="zkt_prf" type="text" class="form-zakat" />
+					<input name="zkt_prf" id="zkt_prf" type="text" class="form-zakat" readonly="readonly" />
 				</div>
 			</div>
 			<div class="container_element">
@@ -87,7 +87,7 @@
 					Dibayarkan pertahun
 				</div>
 				<div class="container_untuk_form">
-					<input name="byr_thn" id="byr_thn" type="text" class="form-zakat" />
+					<input name="byr_thn" id="byr_thn" type="text" class="form-zakat" readonly="readonly" />
 				</div>
 			</div>
 			<div class="container_element">
@@ -95,7 +95,7 @@
 					Dibayarkan perbulan
 				</div>
 				<div class="container_untuk_form">
-					<input name="byr_bln" id="byr_bln" type="text" class="form-zakat" />
+					<input name="byr_bln" id="byr_bln" type="text" class="form-zakat" readonly="readonly" />
 				</div>
 			</div>
 			<div class="header-content">
@@ -122,7 +122,7 @@
 					Kebutuhan (/Tahun)
 				</div>
 				<div class="container_untuk_form">
-					<input name="bth_thn" id="bth_thn" type="text" class="form-zakat" />
+					<input name="bth_thn" id="bth_thn" type="text" class="form-zakat" readonly="readonly" />
 				</div>
 			</div>
 			<div class="container_element">
@@ -130,7 +130,7 @@
 					Sisa Pendapatan
 				</div>
 				<div class="container_untuk_form">
-					<input name="ss_pdpt" id="ss_pdpt" type="text" class="form-zakat" />
+					<input name="ss_pdpt" id="ss_pdpt" type="text" class="form-zakat" readonly="readonly" />
 				</div>
 			</div>
 			<div class="container_element">
@@ -138,7 +138,7 @@
 					Harga emas saat ini (/Gram)
 				</div>
 				<div class="container_untuk_form">
-					<input name="hrg_mas" id="hrg_mas" type="text" class="form-zakat" />
+					<input name="hrg_mas" id="hrg_mas" type="text" class="form-zakat" value="0" />
 				</div>
 			</div>
 			<div class="container_element">
@@ -146,7 +146,7 @@
 					Besarnya nishab
 				</div>
 				<div class="container_untuk_form">
-					<input name="bsr_nsb" id="bsr_nsb" type="text" class="form-zakat" />
+					<input name="bsr_nsb" id="bsr_nsb" type="text" class="form-zakat" readonly="readonly" />
 				</div>
 			</div>
 			<div class="container_element">
@@ -154,7 +154,7 @@
 					Wajib zakat maal?
 				</div>
 				<div class="container_untuk_form">
-					<input name="wjb_zkt" id="wjb_zkt" type="text" class="form-zakat" />
+					<input name="wjb_zkt" id="wjb_zkt" type="text" class="form-zakat" readonly="readonly" />
 				</div>
 			</div>
 			<div class="container_element">
@@ -162,26 +162,34 @@
 					Dibayarkan pertahun
 				</div>
 				<div class="container_untuk_form">
-					<input name="byr_thn2" id="byr_thn2" type="text" class="form-zakat" />
+					<input name="byr_thn2" id="byr_thn2" type="text" class="form-zakat" readonly="readonly" />
 				</div>
 			</div>
 			<div class="container_element">
 				<div class="container_untuk_label">
-					Dibayarkan perbulan
+					Dibayarkan perbulan 	
 				</div>
 				<div class="container_untuk_form">
-					<input name="byr_bln2" id="byr_bln2" type="text" class="form-zakat" />
+					<input name="byr_bln2" id="byr_bln2" type="text" class="form-zakat" readonly="readonly" />
 				</div>
 			</div>
 			<div class="header-content">
-				III. Total Zakat yang Dibayarkan Perbulan
+				III. Total Zakat yang Dibayarkan
 			</div>
 			<div class="container_element">
 				<div class="container_untuk_label">
-					Zakat Maal + Zakat Profesi :
+					Zakat Maal + Zakat Profesi Perbulan :
 				</div>
 				<div class="container_untuk_form">
-					<input name="mal_prf" id="mal_prf" type="text" class="form-zakat"/>
+					<input name="tot_zakat_bln" id="tot_zakat_bln" type="text" class="form-zakat"/>
+				</div>
+			</div>
+			<div class="container_element">
+				<div class="container_untuk_label">
+					Zakat Maal + Zakat Profesi Pertahun :
+				</div>
+				<div class="container_untuk_form">
+					<input name="tot_zakat_thn" id="tot_zakat_thn" type="text" class="form-zakat"/>
 				</div>
 			</div>
 		</div>
