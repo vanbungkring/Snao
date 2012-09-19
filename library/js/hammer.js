@@ -1,3 +1,6 @@
+/*
+ * hammer.js create by Eka pramudita
+ * */
 $(document).ready(function() {
 	// ///// get lookup for searchlocation
 
