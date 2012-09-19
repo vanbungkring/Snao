@@ -8,7 +8,7 @@ $(document).ready(function() {
 			GetCityList(val);
 		}
 	});
-
+	getGMT()
 });
 function getGMT() {
 	$("#dvContent").append("<ul></ul>");
@@ -29,8 +29,8 @@ function getGMT() {
 };
 
 function GetCityList(city) {
-	$.getJSON("http://vanbungkring.com/api/get_recent_posts/", function(result) {
-		console.log(result.status)
+	$.getJSON("http://maps.googleapis.com/maps/api/geocode/json?address=" + city+ "&sensor=true", function(res) {
+		console.log("merdeka");
 	});
 
 }
