@@ -1,48 +1,30 @@
-<!doctype html>
 <html>
 	<head>
-		<title>Example 2</title>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<script>
-			$(document).ready(function() {
-
-				if (document.createElement("datalist").options) {
-
-					$("#search").on("input", function(e) {
-						var val = $(this).val();
-						if (val === "")
-							return;
-						//You could use this to limit results
-						//if(val.length < 3) return;
-						console.log(val);
-						$.get("artservice.cfc?method=getart&returnformat=json", {
-							term : val
-						}, function(res) {
-							var dataList = $("#searchresults");
-							dataList.empty();
-							if (res.DATA.length) {
-								for (var i = 0, len = res.DATA.length; i < len; i++) {
-									var opt = $("<option></option>").attr("value", res.DATA[i][0]);
-									dataList.append(opt);
-								}
-
-							}
-						}, "json");
-					});
-
-				}
-
-			})
-		</script>
+		<style>
+			img {
+				height: 100px;
+				float: left;
+			}
+		</style>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
 	</head>
-
 	<body>
+		<div id="images">
 
-		<p>
-			<input type="text" name="search" id="search" placeholder="Type Something" list="searchresults" autocomplete="off">
-			<datalist id="searchresults"></datalist>
-		</p>
+		</div>
+		<script>
+			$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?", {
+				tags : "mount rainier",
+				tagmode : "any",
+				format : "json"
+			}, function(data) {
+				$.each(data.items, function(i, item) {
+					$("<img/>").attr("src", item.media.m).appendTo("#images");
+					if (i == 3)
+						return false;
+				});
+			});
+		</script>
 
 	</body>
 </html>
-

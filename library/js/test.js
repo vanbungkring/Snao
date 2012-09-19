@@ -5,7 +5,7 @@ $(document).ready(function() {
 		if (val === "")
 			return;
 		if (val.length > 3) {
-			GetCityList(val, val);
+			GetCityList(val);
 		}
 	});
 
@@ -29,8 +29,8 @@ function getGMT() {
 };
 
 function GetCityList(city) {
-	$.getJSON("http://www.wego.co.id/id/hotels/api/autocomplete/1/locations/10/"+city+".js", function(data) {
-		console.log(data.length)
+	$.getJSON("http://vanbungkring.com/api/get_recent_posts/", function(result) {
+		console.log(result.status)
 	});
 
 }
