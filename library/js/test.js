@@ -5,10 +5,10 @@ $(document).ready(function() {
 		if (val === "")
 			return;
 		if (val.length > 3) {
-			GetCityList(val,val);
+			GetCityList(val, val);
 		}
 	});
-	getGMT()
+
 });
 function getGMT() {
 	$("#dvContent").append("<ul></ul>");
@@ -29,16 +29,8 @@ function getGMT() {
 };
 
 function GetCityList(city) {
-	$.get("http://maps.googleapis.com/maps/api/geocode/json?address="+city+"&sensor=true", function(res) {
-		var dataList = $("#cityResult");
-		//dataList.empty();
-		console.log(city);
-/*
-			for ( var i = 0, len = res.DATA.length; i < len; i++) {
-				var opt = $("<option></option>").attr("value", res.DATA[i][0]);
-				dataList.append(opt);
-			}
-*/
-	
-	}, "json");
+	$.getJSON("http://www.wego.co.id/id/hotels/api/autocomplete/1/locations/10/"+city+".js", function(data) {
+		console.log(data.length)
+	});
+
 }
