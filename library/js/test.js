@@ -31,7 +31,7 @@ function getGMT() {
 function GetCityList(city) {
 	$.get("http://maps.googleapis.com/maps/api/geocode/json?address="+city+"&sensor=true", function(res) {
 		var dataList = $("#cityResult");
-		dataList.empty();
+		//dataList.empty();
 		console.log(city);
 /*
 			for ( var i = 0, len = res.DATA.length; i < len; i++) {
