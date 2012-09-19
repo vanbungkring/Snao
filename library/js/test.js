@@ -5,13 +5,12 @@ $(document).ready(function() {
 		if (val === "")
 			return;
 		if (val.length > 3) {
-			console.log(val);
+			getCity(val)
 		}
 	});
 	getGMT()
 });
 function getGMT() {
-	$("#dvContent").append("<ul></ul>");
 	$.ajax({
 		type : "GET",
 		url : "http://ws.geonames.org/timezone?lat=-14.2350040&lng=-51.925280",
@@ -25,5 +24,12 @@ function getGMT() {
 		error : function() {
 			alert("Kesalahan terjadi Sewaktu Menampilkan Data");
 		}
+	});
+};
+
+function getCity(city) {
+	var url = "http://maps.googleapis.com/maps/api/geocode/json?address=jakarta&sensor=true"
+	$.getJSON(url, function(data) {
+		console.log(data)
 	});
 };
