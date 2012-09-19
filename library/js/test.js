@@ -5,7 +5,7 @@ $(document).ready(function() {
 		if (val === "")
 			return;
 		if (val.length > 3) {
-			GetCityList(val);
+			console.log(val);
 		}
 	});
 	getGMT()
@@ -23,14 +23,7 @@ function getGMT() {
 			});
 		},
 		error : function() {
-			alert("An error occurred while processing XML file.");
+			alert("Kesalahan terjadi Sewaktu Menampilkan Data");
 		}
 	});
 };
-
-function GetCityList(city) {
-	$.getJSON("http://maps.googleapis.com/maps/api/geocode/json?address=" + city+ "&sensor=true", function(res) {
-		console.log("merdeka");
-	});
-
-}
