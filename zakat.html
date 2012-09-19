@@ -2,24 +2,20 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 		<script type="text/javascript" src="library/js/jquery.js"></script>
 		<script type="text/javascript" src="library/js/hammer.js"></script>
 		<script type="text/javascript" src="library/js/jquery.calculation.js"></script>
 		<script type="text/javascript" src="library/js/jquery.calculation.min.js"></script>
 		<script type="text/javascript">
-		$(document).ready(function() {
-			// update the plug-in version
-				$("#idPluginVersion").text($.Calculation.version);
-		
-			// automatically update the "#totalGaji" field every time
-			//sum of all the input objects that start with the name attribute of "sum"
-			// the values are changes via the keyup event
-				//($("input[name^=gaji]").sum("keyup", "#totalGaji")) * 12;
-			
-			
-	
-				
-		})
+		$(document).ready(function () {
+			function calc() {
+				$('#totalGaji').val((parseInt($('#gaji_bulan').val(), 10) + parseInt($("#gaji_lain").val(), 10) - parseInt($("#htg").val(), 10)) * 12);
+			}
+			$('#gaji_bulan').keyup(calc);
+			$("#gaji_lain").keyup(calc);
+			$("#htg").keyup(calc);
+});
 	
 		</script>
 		<link rel="stylesheet" href="library/css/reset.css" />
@@ -43,7 +39,7 @@
 					Pendapatan (Gaji/Perbulan)
 				</div>
 				<div class="container_untuk_form">
-					<input name="gaji_bulan" id="gaji_bulan" type="text" class="form-zakat"/>
+					<input name="gaji_bulan" id="gaji_bulan" type="text" class="form-zakat" value=0 />
 				</div>
 			</div>
 			<div class="container_element">
@@ -51,7 +47,7 @@
 					Pendapatan Lain-lain(/Bulan)
 				</div>
 				<div class="container_untuk_form">
-					<input name="gaji_lain" id="gaji_lain" type="text" class="form-zakat" />
+					<input name="gaji_lain" id="gaji_lain" type="text" class="form-zakat" value=0 />
 				</div>
 			</div>
 			<div class="container_element">
@@ -59,7 +55,7 @@
 					Hutang/Cicilan (/Bulan)
 				</div>
 				<div class="container_untuk_form">
-					<input name="htg" id="htg" type="text" class="form-zakat" />
+					<input name="htg" id="htg" type="text" class="form-zakat" value=0 />
 				</div>
 			</div>
 			<div class="container_element">
@@ -67,7 +63,7 @@
 					Pemasukan/Pendapatan per Tahun
 				</div>
 				<div class="container_untuk_form">
-					<input name="totalGaji" id="totalGaji" type="text" class="form-zakat" readonly="readonly" />
+					<input name="totalGaji" id="totalGaji" type="text" class="form-zakat" readonly="readonly" value=0 />
 				</div>
 			</div>
 			<div class="header-content">
