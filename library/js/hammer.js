@@ -21,11 +21,17 @@ $(document).ready(function() {
 	$('#bth_bln').keyup(calc_pdpt2);
 	$('#hrg_mas').keyup(calc_nisab2);
 });
-// /execute GMT
-function getGMT() {
+// /function get location service on local(without search)
+function getGeoLocal() {
+}
+// ///execute getLocation User
+function getGeo() {
+}
+// /execut getGMT function to get Different GMT TIme by Long-lat Geo Location
+function getGMT(long, lat) {
 	$.ajax({
 		type : "GET",
-		url : "http://ws.geonames.org/timezone?lat=-14.2350040&lng=-51.925280",
+		url : "http://ws.geonames.org/timezone?lat="+long+"&"+lat+",
 		dataType : "xml",
 		success : function(xml) {
 			$(xml).find('timezone').each(function() {
@@ -38,7 +44,8 @@ function getGMT() {
 		}
 	});
 };
-
+function readSholatTime(a, b, c) {
+}
 // //end location lookup
 // calculation totalgaji
 function calc() {
