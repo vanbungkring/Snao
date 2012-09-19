@@ -14,7 +14,7 @@ body {
 	background-repeat: repeat-x;
 	position: fixed;
 	z-index: 100;
-	top:0;
+	top: 0;
 }
 #header .insider {
 	width: 980px;
@@ -33,10 +33,10 @@ body {
 	margin: 0 auto;
 	margin-top: 20px;
 	overflow: hidden;
-	margin-top:80px;
+	margin-top: 80px;
 }
 .header-content {
-	margin-top:-1px;
+	margin-top: -1px;
 	width: 960px;
 	float: left;
 	border-bottom: none;
@@ -116,5 +116,6 @@ body {
 	margin: 0 auto;
 	font-size: 11px;
 	margin-top: 10px;
-	margin-bottom:30px;
+	margin-bottom: 30px;
 }
+/*input*/
